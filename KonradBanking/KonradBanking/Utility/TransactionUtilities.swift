@@ -23,7 +23,7 @@ class TransactionUtilities {
             return firstList
         }
 
-        let nextListSorted = nextList.sorted { $0.date < $1.date }
+        let nextListSorted = nextList.sorted { $0.date > $1.date }
         let secondList = mergeSortedLists(firstList: nextListSorted, restOfLists: Array(restOfLists.dropFirst()))
         return combineTwoSortedLists(list1: firstList, list2: secondList)
     }
@@ -35,6 +35,37 @@ class TransactionUtilities {
     ///   - list2: list of transactions sorted by date (earliest to latest)
     /// - Returns: list of transactions sorted by date (earliest to latest) with no duplicantes
     static func combineTwoSortedLists(list1: [Transaction], list2: [Transaction]) -> [Transaction] {
-        return list1 + list2
+        var result: [Transaction] = []
+        var seenIds = Set<String>()
+        var i = 0
+        var j = 0
+
+        func add(_ transaction: Transaction) {
+            if seenIds.insert(transaction.id).inserted {
+                result.append(transaction)
+            }
+        }
+
+        while i < list1.count && j < list2.count {
+            if list1[i].date >= list2[j].date {
+                add(list1[i])
+                i += 1
+            } else {
+                add(list2[j])
+                j += 1
+            }
+        }
+
+        while i < list1.count {
+            add(list1[i])
+            i += 1
+        }
+
+        while j < list2.count {
+            add(list2[j])
+            j += 1
+        }
+
+        return result
     }
 }

@@ -8,19 +8,56 @@ struct TransactionListView: View {
     @State var viewModel = TransactionListViewModel()
 
     var body: some View {
-        List(viewModel.transactions) { transaction in
-            VStack(alignment: .leading) {
-                Text("\(transaction.description) (\(transaction.source))")
-                Text("\(transaction.date.dateString) $\(transaction.value)")
-                    .font(.caption)
-            }
+        List(viewModel.filteredTransactions) { transaction in
+            TransactionRowView(viewModel: TransactionRowViewModel(transaction: transaction))
         }
         .listStyle(.plain)
+        .safeAreaInset(edge: .top) {
+            SearchBar(text: $viewModel.searchText)
+        }
+        .overlay {
+            if viewModel.isLoading {
+                ZStack {
+                    Color(.systemBackground)
+                        .ignoresSafeArea()
+                    ProgressView()
+                        .controlSize(.large)
+                }
+            }
+        }
         .navigationTitle("KG Bank Aggregator")
         .navigationBarTitleDisplayMode(.inline)
-        .onAppear {
-            viewModel.getAllTransactions()
+        .task {
+            await viewModel.getAllTransactions()
         }
+    }
+}
+
+struct SearchBar: View {
+    @Binding var text: String
+
+    var body: some View {
+        HStack {
+            Image(systemName: "magnifyingglass")
+                .foregroundStyle(.secondary)
+            TextField("Search transactions", text: $text)
+                .textInputAutocapitalization(.never)
+                .autocorrectionDisabled()
+            if !text.isEmpty {
+                Button {
+                    text = ""
+                } label: {
+                    Image(systemName: "xmark.circle.fill")
+                        .foregroundStyle(.secondary)
+                }
+            }
+        }
+        .padding(8)
+        .background(Color(.systemGray6))
+        .clipShape(RoundedRectangle(cornerRadius: 10))
+        .padding(.horizontal)
+        .padding(.vertical, 8)
+        .background(.bar)
     }
 }
 

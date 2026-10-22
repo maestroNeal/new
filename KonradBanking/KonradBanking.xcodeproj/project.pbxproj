@@ -23,6 +23,9 @@
 		93EFBA1B2BED324300896B9B /* TransactionUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EFBA142BED324200896B9B /* TransactionUtilities.swift */; };
 		93EFBA1E2BED35A800896B9B /* TransactionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EFBA1D2BED35A800896B9B /* TransactionListView.swift */; };
 		93EFBA202BED3C3E00896B9B /* TransactionListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EFBA1F2BED3C3E00896B9B /* TransactionListViewModel.swift */; };
+		93EFBA312BED40A000896B9B /* TransactionRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EFBA302BED40A000896B9B /* TransactionRowView.swift */; };
+		93EFBA332BED40A000896B9B /* TransactionRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EFBA322BED40A000896B9B /* TransactionRowViewModel.swift */; };
+		93EFBA352BED41B000896B9B /* KDService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EFBA342BED41B000896B9B /* KDService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +65,9 @@
 		93EFBA142BED324200896B9B /* TransactionUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionUtilities.swift; sourceTree = "<group>"; };
 		93EFBA1D2BED35A800896B9B /* TransactionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListView.swift; sourceTree = "<group>"; };
 		93EFBA1F2BED3C3E00896B9B /* TransactionListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewModel.swift; sourceTree = "<group>"; };
+		93EFBA302BED40A000896B9B /* TransactionRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRowView.swift; sourceTree = "<group>"; };
+		93EFBA322BED40A000896B9B /* TransactionRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRowViewModel.swift; sourceTree = "<group>"; };
+		93EFBA342BED41B000896B9B /* KDService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KDService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				93EFBA0E2BED324200896B9B /* BKOService.swift */,
+				93EFBA342BED41B000896B9B /* KDService.swift */,
 				93EFBA0F2BED324200896B9B /* KIBKService.swift */,
 				93EFBA102BED324200896B9B /* RBKService.swift */,
 				93EFBA112BED324200896B9B /* TransactionRepository.swift */,
@@ -175,6 +182,8 @@
 			children = (
 				93EFBA1D2BED35A800896B9B /* TransactionListView.swift */,
 				93EFBA1F2BED3C3E00896B9B /* TransactionListViewModel.swift */,
+				93EFBA302BED40A000896B9B /* TransactionRowView.swift */,
+				93EFBA322BED40A000896B9B /* TransactionRowViewModel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -316,7 +325,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				93EFBA162BED324300896B9B /* BKOService.swift in Sources */,
+				93EFBA352BED41B000896B9B /* KDService.swift in Sources */,
 				93EFBA202BED3C3E00896B9B /* TransactionListViewModel.swift in Sources */,
+				93EFBA312BED40A000896B9B /* TransactionRowView.swift in Sources */,
+				93EFBA332BED40A000896B9B /* TransactionRowViewModel.swift in Sources */,
 				93EFB9E22BED1F6200896B9B /* ContentView.swift in Sources */,
 				93EFBA1E2BED35A800896B9B /* TransactionListView.swift in Sources */,
 				93EFBA192BED324300896B9B /* TransactionRepository.swift in Sources */,

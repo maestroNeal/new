@@ -6,13 +6,14 @@ import Foundation
 import SwiftUI
 
 enum BankDataSource {
-    case KIBK, BKO, RBK
+    case KIBK, BKO, RBK, KD
 
     var color: Color {
         switch self {
         case .KIBK: return .red
         case .BKO: return .blue
         case .RBK: return .gray
+        case .KD: return .green
         }
     }
 }
@@ -45,43 +46,45 @@ extension Transaction: Identifiable, Equatable {
 
 @MainActor
 class TransactionRepository {
-    static func getAllTransactions(completionHandler: @escaping ([Transaction]) -> ())  {
-        let dispatchGroup = DispatchGroup()
-        var transactions = [[Transaction]]()
+    static func getAllTransactions() async -> [Transaction] {
+        async let kibkTransactions = fetchKIBKTransactions()
+        async let rbkTransactions = fetchRBKTransactions()
+        async let bkoTransactions = fetchBKOTransactions()
+        async let kdTransactions = fetchKDTransactions()
 
-        dispatchGroup.enter()
-        KIBKService.getTransactions { list in
-            Task { @MainActor in
-                transactions.append(
-                    list.map { Transaction($0) }
-                )
-                dispatchGroup.leave()
+        let transactions = await [kibkTransactions, rbkTransactions, bkoTransactions, kdTransactions]
+        return TransactionUtilities.combineAndSortTransactions(transactionsList: transactions)
+    }
+
+    private static func fetchKIBKTransactions() async -> [Transaction] {
+        await withCheckedContinuation { continuation in
+            KIBKService.getTransactions { list in
+                continuation.resume(returning: list.map { Transaction($0) })
             }
         }
+    }
 
-        dispatchGroup.enter()
-        RBKService.getTransactions { list in
-            Task { @MainActor in
-                transactions.append(
-                    list.map { Transaction($0) }
-                )
-                dispatchGroup.leave()
+    private static func fetchRBKTransactions() async -> [Transaction] {
+        await withCheckedContinuation { continuation in
+            RBKService.getTransactions { list in
+                continuation.resume(returning: list.map { Transaction($0) })
             }
         }
+    }
 
-        dispatchGroup.enter()
-        BKOService.getTransactions { list in
-            Task { @MainActor in
-                transactions.append(
-                    list.map { Transaction($0) }
-                )
-                dispatchGroup.leave()
+    private static func fetchBKOTransactions() async -> [Transaction] {
+        await withCheckedContinuation { continuation in
+            BKOService.getTransactions { list in
+                continuation.resume(returning: list.map { Transaction($0) })
             }
         }
-        
-        dispatchGroup.notify(queue: .main) {
-            let sortedTransactions = TransactionUtilities.combineAndSortTransactions(transactionsList: transactions)
-            completionHandler(sortedTransactions)
+    }
+
+    private static func fetchKDTransactions() async -> [Transaction] {
+        await withCheckedContinuation { continuation in
+            KDService.getTransactions { list in
+                continuation.resume(returning: list.map { Transaction($0) })
+            }
         }
     }
 }
@@ -110,5 +113,14 @@ extension Transaction {
         description = kibkTransaction.details
         source = .KIBK
         tags = kibkTransaction.category
+    }
+
+    init(_ kdTransaction: KDTransactionResponse.KDTransaction) {
+        let isWithdrawal = kdTransaction.type == .withdrawal
+        date = kdTransaction.transactionTime
+        value = isWithdrawal ? kdTransaction.amount.amount : -1 * kdTransaction.amount.amount
+        description = isWithdrawal ? kdTransaction.to.name : kdTransaction.from.name
+        source = .KD
+        tags = kdTransaction.tags ?? []
     }
 }
