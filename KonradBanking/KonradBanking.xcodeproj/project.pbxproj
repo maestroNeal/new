@@ -1,0 +1,672 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		93EFB9E02BED1F6200896B9B /* KonradBankingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EFB9DF2BED1F6200896B9B /* KonradBankingApp.swift */; };
+		93EFB9E22BED1F6200896B9B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EFB9E12BED1F6200896B9B /* ContentView.swift */; };
+		93EFB9E42BED1F6500896B9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93EFB9E32BED1F6500896B9B /* Assets.xcassets */; };
+		93EFB9E72BED1F6500896B9B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93EFB9E62BED1F6500896B9B /* Preview Assets.xcassets */; };
+		93EFB9F12BED1F6500896B9B /* KonradBankingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EFB9F02BED1F6500896B9B /* KonradBankingTests.swift */; };
+		93EFB9FB2BED1F6600896B9B /* KonradBankingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EFB9FA2BED1F6600896B9B /* KonradBankingUITests.swift */; };
+		93EFB9FD2BED1F6600896B9B /* KonradBankingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EFB9FC2BED1F6600896B9B /* KonradBankingUITestsLaunchTests.swift */; };
+		93EFBA0D2BED2D5C00896B9B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 93EFBA0C2BED2D5C00896B9B /* Alamofire */; };
+		93EFBA162BED324300896B9B /* BKOService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EFBA0E2BED324200896B9B /* BKOService.swift */; };
+		93EFBA172BED324300896B9B /* KIBKService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EFBA0F2BED324200896B9B /* KIBKService.swift */; };
+		93EFBA182BED324300896B9B /* RBKService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EFBA102BED324200896B9B /* RBKService.swift */; };
+		93EFBA192BED324300896B9B /* TransactionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EFBA112BED324200896B9B /* TransactionRepository.swift */; };
+		93EFBA1A2BED324300896B9B /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EFBA132BED324200896B9B /* Date+Extension.swift */; };
+		93EFBA1B2BED324300896B9B /* TransactionUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EFBA142BED324200896B9B /* TransactionUtilities.swift */; };
+		93EFBA1E2BED35A800896B9B /* TransactionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EFBA1D2BED35A800896B9B /* TransactionListView.swift */; };
+		93EFBA202BED3C3E00896B9B /* TransactionListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EFBA1F2BED3C3E00896B9B /* TransactionListViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		93EFB9ED2BED1F6500896B9B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 93EFB9D42BED1F6200896B9B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 93EFB9DB2BED1F6200896B9B;
+			remoteInfo = KonradBanking;
+		};
+		93EFB9F72BED1F6600896B9B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 93EFB9D42BED1F6200896B9B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 93EFB9DB2BED1F6200896B9B;
+			remoteInfo = KonradBanking;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		93EFB9DC2BED1F6200896B9B /* KonradBanking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KonradBanking.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		93EFB9DF2BED1F6200896B9B /* KonradBankingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KonradBankingApp.swift; sourceTree = "<group>"; };
+		93EFB9E12BED1F6200896B9B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		93EFB9E32BED1F6500896B9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		93EFB9E62BED1F6500896B9B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		93EFB9EC2BED1F6500896B9B /* KonradBankingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KonradBankingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		93EFB9F02BED1F6500896B9B /* KonradBankingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KonradBankingTests.swift; sourceTree = "<group>"; };
+		93EFB9F62BED1F6600896B9B /* KonradBankingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KonradBankingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		93EFB9FA2BED1F6600896B9B /* KonradBankingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KonradBankingUITests.swift; sourceTree = "<group>"; };
+		93EFB9FC2BED1F6600896B9B /* KonradBankingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KonradBankingUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		93EFBA0A2BED221800896B9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		93EFBA0E2BED324200896B9B /* BKOService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BKOService.swift; sourceTree = "<group>"; };
+		93EFBA0F2BED324200896B9B /* KIBKService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KIBKService.swift; sourceTree = "<group>"; };
+		93EFBA102BED324200896B9B /* RBKService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBKService.swift; sourceTree = "<group>"; };
+		93EFBA112BED324200896B9B /* TransactionRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionRepository.swift; sourceTree = "<group>"; };
+		93EFBA132BED324200896B9B /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		93EFBA142BED324200896B9B /* TransactionUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionUtilities.swift; sourceTree = "<group>"; };
+		93EFBA1D2BED35A800896B9B /* TransactionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListView.swift; sourceTree = "<group>"; };
+		93EFBA1F2BED3C3E00896B9B /* TransactionListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		93EFB9D92BED1F6200896B9B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93EFBA0D2BED2D5C00896B9B /* Alamofire in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93EFB9E92BED1F6500896B9B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93EFB9F32BED1F6600896B9B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		93EFB9D32BED1F6200896B9B = {
+			isa = PBXGroup;
+			children = (
+				93EFB9DE2BED1F6200896B9B /* KonradBanking */,
+				93EFB9EF2BED1F6500896B9B /* KonradBankingTests */,
+				93EFB9F92BED1F6600896B9B /* KonradBankingUITests */,
+				93EFB9DD2BED1F6200896B9B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		93EFB9DD2BED1F6200896B9B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				93EFB9DC2BED1F6200896B9B /* KonradBanking.app */,
+				93EFB9EC2BED1F6500896B9B /* KonradBankingTests.xctest */,
+				93EFB9F62BED1F6600896B9B /* KonradBankingUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		93EFB9DE2BED1F6200896B9B /* KonradBanking */ = {
+			isa = PBXGroup;
+			children = (
+				93EFBA122BED324200896B9B /* Networking */,
+				93EFBA152BED324200896B9B /* Utility */,
+				93EFBA1C2BED359100896B9B /* Views */,
+				93EFBA0A2BED221800896B9B /* Info.plist */,
+				93EFB9DF2BED1F6200896B9B /* KonradBankingApp.swift */,
+				93EFB9E12BED1F6200896B9B /* ContentView.swift */,
+				93EFB9E32BED1F6500896B9B /* Assets.xcassets */,
+				93EFB9E52BED1F6500896B9B /* Preview Content */,
+			);
+			path = KonradBanking;
+			sourceTree = "<group>";
+		};
+		93EFB9E52BED1F6500896B9B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				93EFB9E62BED1F6500896B9B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		93EFB9EF2BED1F6500896B9B /* KonradBankingTests */ = {
+			isa = PBXGroup;
+			children = (
+				93EFB9F02BED1F6500896B9B /* KonradBankingTests.swift */,
+			);
+			path = KonradBankingTests;
+			sourceTree = "<group>";
+		};
+		93EFB9F92BED1F6600896B9B /* KonradBankingUITests */ = {
+			isa = PBXGroup;
+			children = (
+				93EFB9FA2BED1F6600896B9B /* KonradBankingUITests.swift */,
+				93EFB9FC2BED1F6600896B9B /* KonradBankingUITestsLaunchTests.swift */,
+			);
+			path = KonradBankingUITests;
+			sourceTree = "<group>";
+		};
+		93EFBA122BED324200896B9B /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				93EFBA0E2BED324200896B9B /* BKOService.swift */,
+				93EFBA0F2BED324200896B9B /* KIBKService.swift */,
+				93EFBA102BED324200896B9B /* RBKService.swift */,
+				93EFBA112BED324200896B9B /* TransactionRepository.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		93EFBA152BED324200896B9B /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				93EFBA132BED324200896B9B /* Date+Extension.swift */,
+				93EFBA142BED324200896B9B /* TransactionUtilities.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		93EFBA1C2BED359100896B9B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				93EFBA1D2BED35A800896B9B /* TransactionListView.swift */,
+				93EFBA1F2BED3C3E00896B9B /* TransactionListViewModel.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		93EFB9DB2BED1F6200896B9B /* KonradBanking */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93EFBA002BED1F6600896B9B /* Build configuration list for PBXNativeTarget "KonradBanking" */;
+			buildPhases = (
+				93EFB9D82BED1F6200896B9B /* Sources */,
+				93EFB9D92BED1F6200896B9B /* Frameworks */,
+				93EFB9DA2BED1F6200896B9B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KonradBanking;
+			packageProductDependencies = (
+				93EFBA0C2BED2D5C00896B9B /* Alamofire */,
+			);
+			productName = KonradBanking;
+			productReference = 93EFB9DC2BED1F6200896B9B /* KonradBanking.app */;
+			productType = "com.apple.product-type.application";
+		};
+		93EFB9EB2BED1F6500896B9B /* KonradBankingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93EFBA032BED1F6600896B9B /* Build configuration list for PBXNativeTarget "KonradBankingTests" */;
+			buildPhases = (
+				93EFB9E82BED1F6500896B9B /* Sources */,
+				93EFB9E92BED1F6500896B9B /* Frameworks */,
+				93EFB9EA2BED1F6500896B9B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				93EFB9EE2BED1F6500896B9B /* PBXTargetDependency */,
+			);
+			name = KonradBankingTests;
+			productName = KonradBankingTests;
+			productReference = 93EFB9EC2BED1F6500896B9B /* KonradBankingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		93EFB9F52BED1F6600896B9B /* KonradBankingUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93EFBA062BED1F6600896B9B /* Build configuration list for PBXNativeTarget "KonradBankingUITests" */;
+			buildPhases = (
+				93EFB9F22BED1F6600896B9B /* Sources */,
+				93EFB9F32BED1F6600896B9B /* Frameworks */,
+				93EFB9F42BED1F6600896B9B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				93EFB9F82BED1F6600896B9B /* PBXTargetDependency */,
+			);
+			name = KonradBankingUITests;
+			productName = KonradBankingUITests;
+			productReference = 93EFB9F62BED1F6600896B9B /* KonradBankingUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		93EFB9D42BED1F6200896B9B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					93EFB9DB2BED1F6200896B9B = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					93EFB9EB2BED1F6500896B9B = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 93EFB9DB2BED1F6200896B9B;
+					};
+					93EFB9F52BED1F6600896B9B = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 93EFB9DB2BED1F6200896B9B;
+					};
+				};
+			};
+			buildConfigurationList = 93EFB9D72BED1F6200896B9B /* Build configuration list for PBXProject "KonradBanking" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 93EFB9D32BED1F6200896B9B;
+			packageReferences = (
+				93EFBA0B2BED2D5C00896B9B /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
+			productRefGroup = 93EFB9DD2BED1F6200896B9B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				93EFB9DB2BED1F6200896B9B /* KonradBanking */,
+				93EFB9EB2BED1F6500896B9B /* KonradBankingTests */,
+				93EFB9F52BED1F6600896B9B /* KonradBankingUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		93EFB9DA2BED1F6200896B9B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93EFB9E72BED1F6500896B9B /* Preview Assets.xcassets in Resources */,
+				93EFB9E42BED1F6500896B9B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93EFB9EA2BED1F6500896B9B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93EFB9F42BED1F6600896B9B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		93EFB9D82BED1F6200896B9B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93EFBA162BED324300896B9B /* BKOService.swift in Sources */,
+				93EFBA202BED3C3E00896B9B /* TransactionListViewModel.swift in Sources */,
+				93EFB9E22BED1F6200896B9B /* ContentView.swift in Sources */,
+				93EFBA1E2BED35A800896B9B /* TransactionListView.swift in Sources */,
+				93EFBA192BED324300896B9B /* TransactionRepository.swift in Sources */,
+				93EFBA172BED324300896B9B /* KIBKService.swift in Sources */,
+				93EFBA1A2BED324300896B9B /* Date+Extension.swift in Sources */,
+				93EFB9E02BED1F6200896B9B /* KonradBankingApp.swift in Sources */,
+				93EFBA182BED324300896B9B /* RBKService.swift in Sources */,
+				93EFBA1B2BED324300896B9B /* TransactionUtilities.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93EFB9E82BED1F6500896B9B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93EFB9F12BED1F6500896B9B /* KonradBankingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93EFB9F22BED1F6600896B9B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93EFB9FD2BED1F6600896B9B /* KonradBankingUITestsLaunchTests.swift in Sources */,
+				93EFB9FB2BED1F6600896B9B /* KonradBankingUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		93EFB9EE2BED1F6500896B9B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 93EFB9DB2BED1F6200896B9B /* KonradBanking */;
+			targetProxy = 93EFB9ED2BED1F6500896B9B /* PBXContainerItemProxy */;
+		};
+		93EFB9F82BED1F6600896B9B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 93EFB9DB2BED1F6200896B9B /* KonradBanking */;
+			targetProxy = 93EFB9F72BED1F6600896B9B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		93EFB9FE2BED1F6600896B9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		93EFB9FF2BED1F6600896B9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 6.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		93EFBA012BED1F6600896B9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"KonradBanking/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KonradBanking/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.konrad.KonradBanking;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		93EFBA022BED1F6600896B9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"KonradBanking/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KonradBanking/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.konrad.KonradBanking;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		93EFBA042BED1F6600896B9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.konrad.KonradBankingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KonradBanking.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/KonradBanking";
+			};
+			name = Debug;
+		};
+		93EFBA052BED1F6600896B9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.konrad.KonradBankingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KonradBanking.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/KonradBanking";
+			};
+			name = Release;
+		};
+		93EFBA072BED1F6600896B9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.konrad.KonradBankingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KonradBanking;
+			};
+			name = Debug;
+		};
+		93EFBA082BED1F6600896B9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.konrad.KonradBankingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KonradBanking;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		93EFB9D72BED1F6200896B9B /* Build configuration list for PBXProject "KonradBanking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93EFB9FE2BED1F6600896B9B /* Debug */,
+				93EFB9FF2BED1F6600896B9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93EFBA002BED1F6600896B9B /* Build configuration list for PBXNativeTarget "KonradBanking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93EFBA012BED1F6600896B9B /* Debug */,
+				93EFBA022BED1F6600896B9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93EFBA032BED1F6600896B9B /* Build configuration list for PBXNativeTarget "KonradBankingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93EFBA042BED1F6600896B9B /* Debug */,
+				93EFBA052BED1F6600896B9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93EFBA062BED1F6600896B9B /* Build configuration list for PBXNativeTarget "KonradBankingUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93EFBA072BED1F6600896B9B /* Debug */,
+				93EFBA082BED1F6600896B9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		93EFBA0B2BED2D5C00896B9B /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		93EFBA0C2BED2D5C00896B9B /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 93EFBA0B2BED2D5C00896B9B /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 93EFB9D42BED1F6200896B9B /* Project object */;
+}
